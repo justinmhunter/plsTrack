@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+<body>
+<table>
+{% for nick in pls_links %}
+  <tr>
+    <form action="delete/{{nick}}" method="post" name="delete">
+      <td><a href="{{pls_links[nick]}}">{{nick}}</a></td><td><input type="submit" class="delete" value="Delete"></td>
+    </form>
+  </tr>
+{% endfor %}
+</table>
+</body>
+{% endblock %}
