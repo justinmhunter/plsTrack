@@ -7,7 +7,6 @@ class RedisModel(StrictRedis):
 
     _instance = None
 
-    #def __new__(cls, *args, **kwargs): # know the difference btw *args and **kwargs
     def __new__(cls):
         if not cls._instance:
             cls._instance = super(RedisModel, cls).__new__(
